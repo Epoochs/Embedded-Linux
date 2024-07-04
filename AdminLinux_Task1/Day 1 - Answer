@@ -9,4 +9,4 @@
 5 -> cp /etc/passwd ~/mypasswd
 6 -> mv passwd mypasswd
 7 -> i) cd ~
-    ii) cd .
+    ii) cd ../../
