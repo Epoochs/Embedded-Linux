@@ -12,6 +12,8 @@
     ii) cd $HOME (using the environment variable)
    iii) cd (without adding any further options)
      I) cd - (Get back directly to where I was originally) 
-8 -> ls w* /user/bin 
+8 -> ls /user/bin/w* 
 9 -> it displays the info of the command type.
-10-> 
+10-> ls /user/bin/c*
+11-> 
+12-> used to search for the commands related to specific keywords when I don't remember the exaxt command.
