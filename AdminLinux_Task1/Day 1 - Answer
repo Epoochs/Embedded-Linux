@@ -15,5 +15,5 @@
 8 -> ls /user/bin/w* 
 9 -> it displays the info of the command type.
 10-> ls /user/bin/c*
-11-> cat.
+11-> 
 12-> used to search for the commands related to specific keywords when I don't remember the exaxt command.
