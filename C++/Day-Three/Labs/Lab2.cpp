@@ -1,36 +1,37 @@
 #include <iostream>
 
+template <typename T, typename T>
 class pair
 {
 private:
-    int first;
-    int second;
+    T first;
+    T second;
 
 public:
     pair() : first(0), second(0) {}
-    pair(int first, int second) : first(first), second(second) {}
+    pair(T first, T second) : first(first), second(second) {}
 
-    void set_first(int f)
+    void set_first(T f)
     {
         first = f;
     }
-    void set_second(int s)
+    void set_second(T s)
     {
         second = s;
     }
 
-    void set_pairs(int f, int s)
+    void set_pairs(T f, T s)
     {
         first = f;
         second = s;
     }
 
-    int get_first()
+    T get_first()
     {
         return first;
     }
 
-    int get_second()
+    T get_second()
     {
         return second;
     }
@@ -42,7 +43,7 @@ public:
 
     void swap()
     {
-        int temp = first;
+        T temp = first;
         first = second;
         second = temp;
     }
@@ -50,7 +51,7 @@ public:
 
 int main()
 {
-    pair p1;
+    pair<int, int> p1;
     p1.set_pairs(1, 2);
     p1.print();
 
