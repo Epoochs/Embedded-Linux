@@ -25,9 +25,11 @@ INC := -I$(INC_DIR)
 # Targets
 all: $(APP)
 
+# Generate the 
 $(APP): $(OBJS)
 	$(CC) $(INC) -o $@ $^
 
+# Compiling all dependencies and generate object files and place them in bin/
 $(BIN_DIR)/%.o: $(SRC_DIR)/%.c
 	$(CC) $(INC) -c -o $@ $<
 
