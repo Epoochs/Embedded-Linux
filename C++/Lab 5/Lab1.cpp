@@ -14,11 +14,14 @@ int main()
         {
             count++;
             txt.replace(found, 5, "circle");
-            txt.insert(found, "great ");
 
             if (count == 2)
             {
                 txt.insert(found, "never-ending ");
+            }
+            else if (count == 1)
+            {
+                txt.insert(found, "great ");
             }
 
             inc = 5;
