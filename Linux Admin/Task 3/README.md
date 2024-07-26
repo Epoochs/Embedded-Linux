@@ -21,6 +21,7 @@
         <br />
         ```bash
         PS1='[\u@\h \W \d]\$
+        ```
         
         <br />
         then applying the changes by sourcing the .bashrc
