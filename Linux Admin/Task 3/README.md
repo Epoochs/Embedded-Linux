@@ -20,8 +20,8 @@
         This will open the file and we change PS1 that is used to set the prompt.
         <br />
         ```bash
-        PS1='[\u@\h \W \d]\$ '
-        ```
+        PS1='[\u@\h \W \d]\$
+        
         <br />
         then applying the changes by sourcing the .bashrc
         <br />
