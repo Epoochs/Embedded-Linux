@@ -20,7 +20,7 @@
         This will open the file and we change PS1 that is used to set the prompt.
         <br />
         ```bash
-        PS1='[\u@\h \W \d]\$
+        PS1='[\u@\h \W \d]\$ '
         ```
         <br />
         then applying the changes by sourcing the .bashrc
@@ -42,3 +42,19 @@
         wc -l /tmp/command.list
         # -l: stands for `line` which means the number of lines.
         ```
+        <br />
+
+**4.** - ```bash
+         cat filename1 | cat filename2
+         ```
+         <br />
+         This will print only the content of the file 2 and the output of file one will be ignored.
+       - ```bash
+        ls | rm
+         ```
+         <br />
+         This should delete the contents in the current directory, but this is not the case becase `rm` is taking the name of files as arguments not as standard input.
+       - ```bash
+         ls /etc/passwd | wc –l
+         ```
+         This will generate an error as `passwd` is neither a file nor a directory.his counts the number of lines in the output of ls /etc/passwd. Since ls /etc/passwd produces a single line containing the file name passwd, wc -l will count this as one line.
