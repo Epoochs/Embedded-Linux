@@ -49,12 +49,18 @@
          ```
          <br />
          This will print only the content of the file 2 and the output of file one will be ignored.
+         <br />
        - ```bash
         ls | rm
          ```
          <br />
          This should delete the contents in the current directory, but this is not the case becase `rm` is taking the name of files as arguments not as standard input.
+         <br />
        - ```bash
          ls /etc/passwd | wc –l
          ```
          This will generate an error as `passwd` is neither a file nor a directory.his counts the number of lines in the output of ls /etc/passwd. Since ls /etc/passwd produces a single line containing the file name passwd, wc -l will count this as one line.
+         <br />
+
+
+**5.** ```bash sudo find / -type f -name ".profile" ```
