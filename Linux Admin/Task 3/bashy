@@ -1,0 +1,19 @@
+#!/bin/bash
+# This the implementation of Section 1 in the third Task.
+
+if [-f ~/.bashrc ]; then
+	echo "Existed"
+
+	echo 'export HELLO=$HOSTNAME' >> ~/.bashrc
+	echo 'LOCAL=$(whoami)' >> ~/.bashrc
+
+	. ~/.bashrc
+
+	gnome-terminal $
+
+else
+	echo "Not Existed"
+	touch .bashrc
+fi
+
+
