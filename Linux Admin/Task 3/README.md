@@ -28,3 +28,17 @@
         ```bash
         source ~/.bashrc
         ```
+
+**3.** The command used to count the word in a file is `wc` which stands for **Word Count** 
+        <br />
+        ```bash
+        wc -w filename.txt
+        # -w: used to as an option to count the words
+        ```
+        <br />
+        To count the number of commands using `wc`:
+        <br />
+        ```bash
+        wc -l /tmp/command.list
+        # -l: stands for `line` which means the number of lines.
+        ```
