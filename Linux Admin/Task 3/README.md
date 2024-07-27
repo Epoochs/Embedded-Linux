@@ -64,3 +64,21 @@
 
 
 **5.** ```bash sudo find / -type f -name ".profile" ```
+
+**6.** ```bash ls -id /etc/hosts ```
+**7.** ```bash sudo ln -s /etc/passwd /boot/passwd ```
+**8.** Creating a hard link of /etc/passwd in /boot would generally not be feasible or advisable for several reasons. Some of them are:
+            - Hard links cannot be created for directories (with a few exceptions in certain situations), but they can be created for files.
+            - Hard links must reside on the same file system as the original file. This means you cannot create a hard link to /etc/passwd in /boot if /boot and /etc are on different file systems.
+
+**9.** >: It indicates that the shell is expecting more input to complete the command you started. This usually happens when the shell detects that the command is incomplete or that additional input is required.
+          <br />
+          ```bash
+            echo \
+          ```
+          <br />
+          we can change it from `>` to `:` by modifying the PS2 in the `.bashrc`; PS2 is an environment variable used in Unix-like operating systems' command shells, such as bash. It defines the secondary prompt string, which is displayed when a command spans multiple lines or when the shell expects additional input from the user.
+          <br />
+          ```bash
+          PS2=':'
+          ```
