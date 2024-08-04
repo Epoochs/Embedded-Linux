@@ -42,14 +42,12 @@ int main()
     std::thread t3(fibo_thread,14);
     std::thread t4(fibo_thread,17);
 
-
-    std::thread print(print_thread);
-
     t1.join();
     t2.join();
     t3.join();
     t4.join();
 
+    std::thread print(print_thread);
     print.join();
 
     return 0;
