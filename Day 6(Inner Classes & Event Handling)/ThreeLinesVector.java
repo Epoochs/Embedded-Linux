@@ -3,6 +3,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.util.Vector;
 
+/* Differences between the vector and the arraylist is that the vector's methods are synchronized */
 public class ThreeLinesVector extends Applet {
     private Vector<Integer> x1 = new Vector<Integer>();
     private Vector<Integer> y1 = new Vector<Integer>();
@@ -18,7 +19,7 @@ public class ThreeLinesVector extends Applet {
     public void init() {
         addMouseListener(new MousePressHandler());
         addMouseMotionListener(new MouseDragReleaseHandler());
-        setBackground(Color.WHITE);
+        setBackground(Color.white);
     }
 
     @Override

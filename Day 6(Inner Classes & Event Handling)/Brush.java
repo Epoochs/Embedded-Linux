@@ -372,7 +372,6 @@ public class Brush extends Applet{
         setSize(800, 800);
     }
 
-
     @Override
     public void paint(Graphics g)
     {
@@ -431,7 +430,6 @@ public class Brush extends Applet{
             }
         }
     }
-    
     public class MouseDragReleaseHandler extends MouseMotionAdapter
     {
         @Override
@@ -448,9 +446,6 @@ public class Brush extends Applet{
 
         }
     }
-
-
-
     public class LineButtonHandler implements ActionListener
     {
         @Override
