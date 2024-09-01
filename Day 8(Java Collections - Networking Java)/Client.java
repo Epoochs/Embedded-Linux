@@ -3,48 +3,40 @@ import java.util.*;
 import java.io.*;
 
 
-
-public class Client {
-
-    Socket clientSocket;
-    DataInputStream in;
-    DataOutputStream out;
-
-
+public class Client
+{
     public static void main(String[]args)
     {
         new Client();
     }
 
 
+    private Socket client;
+    private DataInputStream in;
+    private PrintStream out;
+
     public Client()
     {
-        try{
-        clientSocket = new Socket("127.0.0.1",1999);
-        in = new DataInputStream(clientSocket.getInputStream());
-        out = new DataOutputStream(clientSocket.getOutputStream());
-
-        out.writeBytes("Hello Server" + "\n");
-
-        String msg = in.readLine();
-        System.out.println("Server says:" + msg);
-
-
-        }catch(IOException ex)
+        try
         {
-            ex.printStackTrace();
+            client = new Socket("localhost", 1999);
+            in = new DataInputStream(System.in);
+            out = new PrintStream(client.getOutputStream());
+            out.println(in.readLine());
+        }catch(Exception e)
+        {
+            e.printStackTrace();
         }finally
-        {
-            try {
+        {   
+            try{
+                client.close();
                 in.close();
                 out.close();
-                clientSocket.close();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
+            }catch(Exception E)
+            {
+                E.printStackTrace();
+            }
         }
+
     }
-
-
-
 }
