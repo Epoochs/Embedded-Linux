@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">السلام</string>
+    <string name="button">Button</string>
+    <string name="button2">Button</string>
+    <string name="name">Name</string>
+    <string name="Close">إغلاق</string>
+    <string name="Next">التالي</string>
+    <string name="Message">الرسالة</string>
+    <string name="Mobile_Number">الهاتف</string>
+</resources>

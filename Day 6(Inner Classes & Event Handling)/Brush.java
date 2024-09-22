@@ -271,7 +271,7 @@ public class Brush extends Applet{
 
     /* Free-Hand Button */
     Button FreeHand_b;
-    boolean Free_s;
+    boolean Free_s = true;
 
     /* Coloring the Shapes */
     Choice ColorBrush_b;
@@ -451,6 +451,8 @@ public class Brush extends Applet{
         @Override
         public void actionPerformed(ActionEvent e)
         {
+            addMouseListener(new MousePressHandler());
+            addMouseMotionListener(new MouseDragReleaseHandler());
             currentShape_t = "Line";
         }
     }

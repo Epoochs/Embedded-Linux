@@ -2,21 +2,13 @@ import java.applet.Applet;
 import java.awt.*;
 import java.awt.event.*;
 
-
 public class ThreeLines extends Applet
 {
-    private int[] x1 = new int[3];
-    private int[] y1 = new int[3];
-    private int[] x2 = new int[3];
-    private int[] y2 = new int[3];
     boolean isDragging = false;
 
-    private int counter;
+    private Lines[] line = new Lines[3];
 
-    private Thread[] ThreadsContainer = new Thread[3];
-    Thread t1;
-    Thread t2;
-    Thread t3;
+    private int counter = 0;
 
     @Override
     public void init()
@@ -28,36 +20,66 @@ public class ThreeLines extends Applet
     @Override
     public void paint(Graphics g)
     {
-
-        if(isDragging)
+        if (isDragging)
         {
-            g.drawLine(x1[counter], y1[counter], x2[counter], y2[counter]);
+            g.drawLine(line[counter].getX1(), line[counter].getY1(), line[counter].getX2(), line[counter].getY2());
         }
 
-
-        for(int i = 0; i < counter; i++)
+        for (int i = 0; i < counter; i++)
         {
-            g.drawLine(x1[i], y1[i], x2[i], y2[i]);
+            g.drawLine(line[i].getX1(), line[i].getY1(), line[i].getX2(), line[i].getY2());
         }
     }
-    
-    public class Lines implements Runnable
+
+    public class Lines
     {
-        @Override
-        public void run()
+        private int x1;
+        private int y1;
+        private int x2;
+        private int y2;
+
+        public Lines() { }
+
+        public Lines(int x1, int y1, int x2, int y2)
         {
-            while(true)
-            {
+            this.x1 = x1;
+            this.y1 = y1; // Corrected here
+            this.x2 = x2;
+            this.y2 = y2;
+        }
 
-                repaint();
+        public int getX1() 
+        {
+             return x1; 
+        }
+        public int getY1() 
+        { 
+            return y1; 
+        }
+        public int getX2() 
+        { 
+            return x2; 
+        }
+        public int getY2() 
+        { 
+            return y2; 
+        }
 
-                try{
-                Thread.sleep(500);
-                }catch(InterruptedException e)
-                {
-                    e.printStackTrace();
-                }
-            }
+        public void setX1(int x1)
+        {
+            this.x1 = x1;
+        }
+        public void setX2(int x2)
+        {
+            this.x2 = x2;
+        }
+        public void setY1(int y1)
+        {
+            this.y1 = y1;
+        }
+        public void setY2(int y2)
+        {
+            this.y2 = y2;
         }
     }
 
@@ -66,37 +88,27 @@ public class ThreeLines extends Applet
         @Override
         public void mousePressed(MouseEvent e)
         {
-            if(counter < 3)
+            if (counter < 3)
             {
-                x1[counter] = e.getX();
-                y1[counter] = e.getY();
-                x2[counter] = x1[counter];
-                y2[counter] = y1[counter];
+                line[counter] = new Lines();
+                line[counter].setX1(e.getX());
+                line[counter].setY1(e.getY());
                 isDragging = true;
-            }
-            else
-            {
-                // Do nothing
             }
         }
 
         @Override
         public void mouseReleased(MouseEvent e)
         {
-            if(counter < 3)
+            if (counter < 3)
             {
-                x2[counter] = e.getX();
-                y2[counter] = e.getY();
-                isDragging = false;
+                line[counter].setX2(e.getX());
+                line[counter].setY2(e.getY());
                 counter++;
+                isDragging = false;
             }
-            else
-            {
-                // Do nothing
-            }
-           
         }
-    } 
+    }
 
     public class MouseDragReleaseHandler extends MouseMotionAdapter
     {
@@ -105,15 +117,10 @@ public class ThreeLines extends Applet
         {
             if (counter < 3)
             {
-                x2[counter] = e.getX();
-                y2[counter] = e.getY();
-                ThreadsContainer[counter] = new Thread(new Lines());
-                ThreadsContainer[counter].start();
+                line[counter].setX2(e.getX());
+                line[counter].setY2(e.getY());
+                repaint();
             }
-            else
-            {
-                // Nothing
-            }
-        }      
+        }
     }
 }

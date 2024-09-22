@@ -1,0 +1,68 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Layout_Main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- TextViews -->
+    <TextView
+        android:id="@+id/MobileNumber_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mobile Number"
+        app:layout_constraintStart_toStartOf="@+id/MobileNumber_et"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/MobileNumber_et"
+        android:layout_width="415dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/MobileNumber_tv" />
+
+    <TextView
+        android:id="@+id/Message_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Message"
+        app:layout_constraintStart_toStartOf="@+id/MobileNumber_et"
+        app:layout_constraintTop_toBottomOf="@+id/MobileNumber_et" />
+
+    <!-- Buttons -->
+
+    <EditText
+        android:id="@+id/Message_et"
+        android:layout_width="415dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Message_tv" />
+
+    <Button
+        android:id="@+id/Next_bt"
+        android:layout_width="237dp"
+        android:layout_height="42dp"
+        android:text="Next"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.967"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="35dp" />
+
+    <Button
+        android:id="@+id/Close_bt"
+        android:layout_width="237dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="16dp"
+        android:text="Close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.967"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Next_bt" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

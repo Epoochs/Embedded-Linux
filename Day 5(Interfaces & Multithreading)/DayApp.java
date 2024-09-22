@@ -2,13 +2,23 @@ import java.applet.Applet;
 import java.awt.*;
 import java.util.Date;
 
-public class DayApp extends Applet implements Runnable
+public class DayApp extends Applet
 {
 
     public void init()
     {
         Thread th;
-        th = new Thread(this);
+        th = new Thread(() -> {
+            while(true)
+            {
+                repaint();
+            try {
+                Thread.sleep(1000); // Sleep for 1 second
+            }catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    });
         th.start();
     }
 
@@ -17,17 +27,5 @@ public class DayApp extends Applet implements Runnable
     {
         Date date = new Date();
         g.drawString(date.toString(), 50, 100);
-    }
-
-    public void run()
-    {
-        while (true)
-        {
-            repaint();
-        }
-    }
-    public static void main(String[]args)
-    {
-
     }
 }

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">AssOne</string>
+    <string name="button">Button</string>
+    <string name="button2">Button</string>
+    <string name="name">Name</string>
+    <string name="Close">Close</string>
+    <string name="Next">Next\n</string>
+    <string name="Message">Message</string>
+    <string name="Mobile_Number">Mobile_Number</string>
+</resources>

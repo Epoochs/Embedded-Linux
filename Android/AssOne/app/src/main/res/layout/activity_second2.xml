@@ -1,0 +1,74 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- TextViews for Mobile Number -->
+    <TextView
+        android:id="@+id/MobileNumberLabel_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mobile Number" />
+
+    <TextView
+        android:id="@+id/tvMobileNumberValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="" />
+
+    <!-- TextViews for Message -->
+    <TextView
+        android:id="@+id/MessageLabel_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Message" />
+
+    <TextView
+        android:id="@+id/tvMessageValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="" />
+
+    <!-- Close Button -->
+    <Button
+        android:id="@+id/CloseSecond_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Close" />
+
+    <Button
+        android:id="@+id/btnShWr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sh_Wr" />
+
+    <Button
+        android:id="@+id/btnShR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sh_R" />
+
+    <Button
+        android:id="@+id/btnFileWr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="File_Wr" />
+
+    <Button
+        android:id="@+id/btnFileR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="File_R" />
+
+    <Button
+        android:id="@+id/btnSQWr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SQ_Wr" />
+
+    <Button
+        android:id="@+id/btnSQR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SQ_R" />
+</LinearLayout>
