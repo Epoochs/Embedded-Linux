@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">RecView</string>
+    <string name="Title">Title</string>
+    <string name="TitleVal">TitleVal</string>
+    <string name="titleVal">titleVal</string>
+    <string name="title">title</string>
+    <string name="Brand">Brand</string>
+    <string name="Description">Description</string>
+    <string name="Price">Price</string>
+    <string name="TitleLine">TitleLine</string>
+    <string name="BrandLine">BrandLine</string>
+    <string name="PriceLine">PriceLine</string>
+    <string name="DescriptionLine">DescriptionLine</string>
+</resources>
