@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">RoomMVP</string>
+    <string name="Products">Products</string>
+    <string name="Favourites">Favourites</string>
+    <string name="Title">Title</string>
+    <string name="Brand">Brand</string>
+    <string name="Price">Price</string>
+    <string name="Description">Description</string>
+    <string name="Fav">Fav</string>
+    <string name="TitleVal">TitleVal</string>
+    <string name="BrandVal">BrandVal</string>
+    <string name="PriceVal">PriceVal</string>
+    <string name="DescriptionVal">DescriptionVal</string>
+    <string name="TitleVal2">TitleVal2</string>
+    <string name="PriceVal2">PriceVal2</string>
+    <string name="BrandVal2">BrandVal2</string>
+    <string name="DescriptionVal2">DescriptionVal2</string>
+    <string name="Delete">Delete</string>
+</resources>
